@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <h1>레이아웃입니다.</h1>
+        <a href="/">메인으로</a>
+        {% if user and user.id %}
+        <p>{{'어서오세요! ' + user.name + '님.'}}</p>
+        <a href="/auth/logout">로그아웃</a>
+        {% else %}
+        <a href="/login">로그인</a>
+        <a href="/signin">회원가입</a>
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
