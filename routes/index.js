@@ -13,6 +13,11 @@ router.get('/', (req,res,next)=>
     res.render('index', {title:'express'});
 });
 
+router.get('/login', (req,res,next)=>
+{
+    res.render('login', {title:'login'});
+});
+
 router.get('/signin', (req,res,next)=>
 {
     res.render('signin', {title:'signin'});

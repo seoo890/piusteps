@@ -2,5 +2,24 @@
 
 {% block content %}
 <h2>이것은 login.html입니다.</h2>
-
+<form id='login-form' action="/auth/login" method="POST">
+    <table>
+        <tr>
+            <td valign="top" style="text-align: right;"><strong>아이디 : </strong></td>
+            <td><input id="user-id" type="text" name="user-id"></td>
+        </tr>
+        <tr>
+            <td><strong>비밀번호 : </strong></td>
+            <td><input type="user-password" name="password"></td>
+        </tr>
+    </table>
+	<!-- <p>
+		<strong>아이디 : </strong>
+		<input type="text" name="name">
+	</p>
+	<p>
+		<strong>비밀번호 : </strong>
+		<input type="password" name="password">
+	</p> -->
+</form>
 {% endblock %}

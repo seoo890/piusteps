@@ -3,13 +3,23 @@
 {% block content %}
 <h2>이것은 signin.html입니다.</h2>
 <form id='signin-form' action="/auth/signin" method="POST">
-	<p>
-		<strong>아이디</strong>
+    <table>
+        <tr>
+            <td valign="top" style="text-align: right;"><strong>아이디 : </strong></td>
+            <td><input type="text" name="user-id"></td>
+        </tr>
+        <tr>
+            <td><strong>비밀번호 : </strong></td>
+            <td><input type="password" name="password"></td>
+        </tr>
+    </table>
+	<!-- <p>
+		<strong>아이디 : </strong>
 		<input type="text" name="name">
 	</p>
 	<p>
-		<strong>비밀번호</strong>
+		<strong>비밀번호 : </strong>
 		<input type="password" name="password">
-	</p>
+	</p> -->
 </form>
 {% endblock %}

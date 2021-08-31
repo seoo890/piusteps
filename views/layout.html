@@ -7,6 +7,7 @@
     <body>
         <h1>레이아웃입니다.</h1>
         <a href="/">메인으로</a>
+        <br>
         {% if user and user.id %}
         <p>{{'어서오세요! ' + user.name + '님.'}}</p>
         <a href="/auth/logout">로그아웃</a>
@@ -15,6 +16,8 @@
         <a href="/signin">회원가입</a>
         {% endif %}
         {% block content %}
+        {% endblock %}
+        {% block script %}
         {% endblock %}
     </body>
 </html>
